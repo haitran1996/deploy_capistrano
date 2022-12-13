@@ -252,9 +252,22 @@ WantedBy=multi-user.target
 Start puma service (shared/tmp/sockets always exists for puma.socket file)
 
 ```
-systemctl start puma_mysite_production.service
-systemctl enable puma_mysite_production.service
-systemctl status puma_mysite_production.service
+systemctl start puma_mysite_production
+systemctl enable puma_mysite_production
+systemctl status puma_mysite_production
+```
+
+open port 80 on instance ec2
+
+```
+- Go to the "Network & Security" -> Security Group settings in the left hand navigation
+- Find the Security Group that your instance is apart of
+- Click on Inbound Rules
+- Click on Edit inbound rules
+- Click on Add Rule
+- Choose http/https 
+  VD: http / TCP / 80 / Anywhere... ...
+- Click Apply and enjoy
 ```
 
 Setting git ssh on server
