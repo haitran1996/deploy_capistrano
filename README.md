@@ -225,6 +225,7 @@ scp config/database.yml  deploy@mysite.com:/var/www/mysite/shared/config
 ```
 
 Create puma service
+`vi /etc/systemd/system/puma_mysite_production.service`
 
 ```bash
 # create puma service to create puma.sock file
